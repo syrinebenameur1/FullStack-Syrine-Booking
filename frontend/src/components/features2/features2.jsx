@@ -2,7 +2,7 @@ import useFetch from "../../Hooks/useFetch";
 import "./features2.css";
 
 const FeaturedProperties = () => {
-  const { data, loading, error } = useFetch("/hotels?featured=true&limit=4");
+  const { data, loading, error } = useFetch("/hotels?featured=true");
 
   return (
     <div className="fp">

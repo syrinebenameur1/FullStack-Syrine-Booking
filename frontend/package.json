@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.2",
     "date-fns": "^2.16.1",
+    "date-range": "^0.0.2",
     "eslint-config-react-app": "^7.0.1",
     "react": "^18.2.0",
     "react-date-range": "^1.4.0",
@@ -47,5 +48,6 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.0"
-  },  "proxy":"http://localhost:8800/api"
+  },
+  "proxy": "http://localhost:8800/api"
 }
