@@ -1,5 +1,5 @@
 import "./Home.css"
-import Navbar from "../../../components/navbar/navbar"
+import Navbar from "../../../components/navbar/Navbar"
 import Header from "../../../components/navbar/Header/Header"
 import Features from "../../../components/features/Features"
 import PropertyList from "../../../components/propertyList/propertyList"

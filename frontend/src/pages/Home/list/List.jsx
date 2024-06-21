@@ -1,6 +1,6 @@
 import "./list.css"
 import Header from '../../../components/navbar/Header/Header'
-import Navbar from "../../../components/navbar/navbar"
+import Navbar from "../../../components/navbar/Navbar.jsx"
 import {useLocation} from "react-router-dom"
 import {useState} from "react";
 import {format} from "date-fns"

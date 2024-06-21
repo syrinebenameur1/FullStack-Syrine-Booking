@@ -1,5 +1,5 @@
 import "./hotel.css";
-import Navbar from "../../../components/navbar/navbar";
+import Navbar from "../../../components/navbar/Navbar.jsx";
 import Header from "../../../components/navbar/Header/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MailList from "../../../components/mailList/mailList";
@@ -28,21 +28,16 @@ const Hotel = () => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const { dates = [{ startDate: null, endDate: null }], options } = useContext(SearchContext);
-
-  console.log("Dates from SearchContext:", dates);
+  const { dates, options } = useContext(SearchContext);
 
   const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
   function dayDifference(date1, date2) {
-    if (!date1 || !date2) return 0;
     const timeDiff = Math.abs(date2.getTime() - date1.getTime());
     const diffDays = Math.ceil(timeDiff / MILLISECONDS_PER_DAY);
     return diffDays;
   }
 
-  const days = dates[0] && dates[0].startDate && dates[0].endDate
-    ? dayDifference(new Date(dates[0].endDate), new Date(dates[0].startDate))
-    : 0;
+  const days = dayDifference(dates[0].endDate, dates[0].startDate);
 
   const handleOpen = (i) => {
     setSlideNumber(i);
@@ -68,7 +63,6 @@ const Hotel = () => {
       navigate("/login");
     }
   };
-
   return (
     <div>
       <Navbar />
